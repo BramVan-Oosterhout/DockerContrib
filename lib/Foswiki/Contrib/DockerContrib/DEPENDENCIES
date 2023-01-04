@@ -1,0 +1,2 @@
+Getopt::Long,>=0,cpan,required
+docker,>=0,external,required

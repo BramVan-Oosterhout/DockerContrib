@@ -1,0 +1,6 @@
+!noci
+data/System/DockerContrib.txt 0644 Documentation page
+lib/Foswiki/Contrib/DockerContrib.pm  Perl module
+lib/Foswiki/Contrib/DockerContrib/Dieken.pm  Perl module 
+lib/Foswiki/Contrib/DockerContrib/TimLegge.pm  Perl module 
+lib/Foswiki/Contrib/DockerContrib/Config.spec 0444 Configuration

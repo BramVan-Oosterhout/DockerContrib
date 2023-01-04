@@ -1,0 +1,68 @@
+%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1672719895" format="1.1" reprev="4" version="4"}%
+%META:TOPICPARENT{name="Contribs"}%
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION%
+-->
+
+%SHORTDESCRIPTION%
+
+%TOC%
+
+%RED% *This is a proof of concept only. Try at your own risk* %ENDCOLOR%
+
+---++ Fast start
+If you don't like reading documentation, and just want a fast route to running a Foswiki site, then: 
+
+   1 Make sure docker is installed and running
+   1 Download the tar ball for DockerContrib  and save it in your home directory
+   2 Untar the tar ball
+   3 cd to the tools directory in the created directory tree
+   4 =perl docker-install.pl dieken -build=
+   5 in your browser access http://localhost:8080
+   6 Proceed to configure your Foswiki
+
+---++ Using DockerContrib
+
+DockerContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
+
+To use this extension, navigate to the tools directory
+<verbatim>
+cd tools
+sudo ./docker-install <foswiki install>
+</verbatim>
+
+---++ docker-install script
+
+The docker-install script  accepts the following options:
+| *Parameter* | *Description* | *Default* |
+| &lt;foswiki install> | The name of the Docker Foswiki contribution you want to install|  |
+| -type | The type of container you want to install | =default= |
+| -build | Build the image from the Dockerfile before installation | -nobuild |
+
+The current implementation supports two contributions:
+| *Source* | *Description* |
+| timlegge | A maintained collection of images described at:  https://github.com/timlegge/docker-foswiki. <br /> Two of the four images available can be installed with =docker-install= : =simple= and =simple-https= <br />This is the most complete and maintained Docker Foswiki image implementation. |
+| dieken | A plain Foswiki image that can be started either under =apache (CGI)= or =nginx (FCGI)= |
+
+
+
+
+---++ Installation
+If you have Foswiki already installed, you can install this extension with the [[configure]] utility.
+
+If you are new to Foswiki, install this extension manually in a directory on your server. Unzip the archive and then use the instructions above to spin up a Docker container. 
+%$INSTALL_INSTRUCTIONS%
+
+---++ Info
+
+|  Author: | BramVanOosterhout |
+|  Copyright: | &copy; %$CREATEDYEAR%, BramVanOosterhout, All Rights Reserved |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Dependencies: | %$DEPENDENCIES% |
+|  Version: | %$VERSION% |
+|  Release: | %$RELEASE% |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  1.0.0 (XX Mmm 20XX): | Initial version |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
