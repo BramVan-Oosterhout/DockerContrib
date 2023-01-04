@@ -11,8 +11,8 @@ sub new {
 			dockerfile => 'Dockerfile',
 			path => '../lib/Docker/timlegge',
 			image => 'timlegge/dockerfoswiki',
-			type => { simple => 'docker-compose.1-simple.yml',
-					  'simple-https' => 'docker-compose.2-simple-https.yml',
+			type => { simple => '../lib/Docker/timlegge/docker-compose.1-simple.yml',
+					  'simple-https' => '../lib/Docker/timlegge/docker-compose.2-simple-https.yml',
 					  },
 			};
 	bless $self, $class;
