@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1672719895" format="1.1" reprev="4" version="4"}%
+%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1672918232" format="1.1" reprev="5" version="5"}%
 %META:TOPICPARENT{name="Contribs"}%
 <!--
 One line description, required for extensions repository catalog.
@@ -9,7 +9,7 @@ One line description, required for extensions repository catalog.
 
 %TOC%
 
-%RED% *This is a proof of concept only. Try at your own risk* %ENDCOLOR%
+%RED% *This is a proof of concept only. Proceed with caution* %ENDCOLOR%
 
 ---++ Fast start
 If you don't like reading documentation, and just want a fast route to running a Foswiki site, then: 
@@ -18,18 +18,19 @@ If you don't like reading documentation, and just want a fast route to running a
    1 Download the tar ball for DockerContrib  and save it in your home directory
    2 Untar the tar ball
    3 cd to the tools directory in the created directory tree
-   4 =perl docker-install.pl dieken -build=
-   5 in your browser access http://localhost:8080
-   6 Proceed to configure your Foswiki
+   4 =perl docker-install.pl timlegge -build=
+      * You will be asked for a password
+   5 In your browser access http://localhost:8080
+   6 Use your Foswiki
 
 ---++ Using DockerContrib
 
-DockerContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
+DockerContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will download a definition from a repository and start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
 
 To use this extension, navigate to the tools directory
 <verbatim>
 cd tools
-sudo ./docker-install <foswiki install>
+sudo perl docker-install,pl <foswiki install>
 </verbatim>
 
 ---++ docker-install script
@@ -63,6 +64,6 @@ If you are new to Foswiki, install this extension manually in a directory on you
 |  Version: | %$VERSION% |
 |  Release: | %$RELEASE% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
-|  1.0.0 (XX Mmm 20XX): | Initial version |
+|  1.0.0 (05 Jan 2023): | Initial version |
 |  Home: | http://foswiki.org/Extensions/%TOPIC% |
 |  Support: | http://foswiki.org/Support/%TOPIC% |
