@@ -36,7 +36,11 @@ sub start{
 	} else {
 		$this->compose( $type );
 	}
-	
+}
+
+sub postInstall{
+	#define post processing here
+	#useful to add password to installed wiki
 }
 
 sub build{
@@ -68,7 +72,7 @@ sub getUpdateRepo {
 sub run{
 	my $this = shift;
 	
-	my $cmd = "docker run -idt -p 8080:80 $this->{image}";
+	my $cmd = "docker run -idt -p 8080:80 --name $this->{containerName} $this->{image}";
 	$this->do_command( $cmd );
 	
 }

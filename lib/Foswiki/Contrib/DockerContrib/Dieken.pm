@@ -9,6 +9,7 @@ sub new {
 	my $self = {
 			source => 'https://github.com/Dieken/foswiki-docker',
 			branch => 'main',
+			containerName => 'dieken',
 			dockerfile => 'Dockerfile',
 			image => 'foswiki'
 			};
