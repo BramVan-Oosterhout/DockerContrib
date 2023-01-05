@@ -55,12 +55,14 @@ sub getUpdateRepo {
 	my ( $owner, $repo ) = ($this->{source} =~ m!([^/]+)/([^/]+)\Z! );
 	my $path = "../working/DockerContrib/" . lc($owner);
 	if (-d "$path/$repo" ) {
-		$cmd = "cd $path/$repo; git pull origin main";
+		$cmd = "cd $path/$repo; git pull origin $this->{branch}";
 	} else {
 		make_path( $path );
 		$cmd = "cd $path; git clone $this->{source}";
 	}
 	$this->do_command( $cmd );
+	
+	$this->{path} = "$path/$repo";
 }
 
 sub run{
@@ -74,7 +76,7 @@ sub run{
 sub compose{
 	my ($this, $type ) = @_;
 	
-	my $cmd = "docker compose -f $this->{type}{$type} up -d";  
+	my $cmd = "docker compose -f \"$this->{path}/$this->{type}{$type}\" up -d";  
 	$this->do_command( $cmd );
 }
 
