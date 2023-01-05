@@ -28,9 +28,11 @@ GetOptions( 'type=s', \$type,
 		    'build!', \$build );
 
 $dc->show($build, $type);
+$DB::single = 1;
+$dc->getUpdateRepo()
 
-$dc->build() if $build;
+# $dc->build() if $build;
 
-$dc->start( $type );
+# $dc->start( $type );
 
 

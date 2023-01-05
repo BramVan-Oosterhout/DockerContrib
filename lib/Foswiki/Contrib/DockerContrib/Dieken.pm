@@ -8,6 +8,7 @@ sub new {
 	my $class = shift;
 	my $self = {
 			source => 'https://github.com/Dieken/foswiki-docker',
+			owner => 'dieken',
 			dockerfile => 'Dockerfile',
 			path => '../lib/Docker/dieken',
 			image => 'foswiki'

@@ -3,6 +3,8 @@ package Foswiki::Contrib::DockerContrib;
 use strict;
 use warnings;
 
+use File::Path qw( make_path );
+
 sub new {
 	my $class = shift;
 	my $self = {
@@ -44,6 +46,21 @@ sub build{
 	$this->do_command( $cmd );
 	
 	###`$cmd`;
+}
+
+sub getUpdateRepo {
+	my $this = shift;
+	
+	my $cmd;
+	my ( $owner, $repo ) = ($this->{source} =~ m!([^/]+)/([^/]+)\Z! );
+	my $path = "../working/DockerContrib/" . lc($owner);
+	if (-d "$path/$repo" ) {
+		$cmd = "cd $path/$repo; git pull origin main";
+	} else {
+		make_path( $path );
+		$cmd = "cd $path; git clone $this->{source}";
+	}
+	$this->do_command( $cmd );
 }
 
 sub run{
