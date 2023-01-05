@@ -8,11 +8,11 @@ sub new {
 	my $class = shift;
 	my $self = {
 			source => 'https://github.com/timlegge/docker-foswiki',
+			branch => 'master',
 			dockerfile => 'Dockerfile',
-			path => '../lib/Docker/timlegge',
 			image => 'timlegge/dockerfoswiki',
-			type => { simple => '../lib/Docker/timlegge/docker-compose.1-simple.yml',
-					  'simple-https' => '../lib/Docker/timlegge/docker-compose.2-simple-https.yml',
+			type => { simple => 'docker-compose.1-simple.yml',
+					  'simple-https' => 'docker-compose.2-simple-https.yml',
 					  },
 			};
 	bless $self, $class;
