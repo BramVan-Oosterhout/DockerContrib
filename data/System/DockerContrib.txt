@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1672918232" format="1.1" reprev="5" version="5"}%
+%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1672966041" format="1.1" reprev="5" version="6"}%
 %META:TOPICPARENT{name="Contribs"}%
 <!--
 One line description, required for extensions repository catalog.
@@ -19,13 +19,18 @@ If you don't like reading documentation, and just want a fast route to running a
    2 Untar the tar ball
    3 cd to the tools directory in the created directory tree
    4 =perl docker-install.pl timlegge -build=
-      * You will be asked for a password
+      * You will be asked to specify a passwordr for the Foswiki =admin- login
    5 In your browser access http://localhost:8080
    6 Use your Foswiki
 
 ---++ Using DockerContrib
 
 DockerContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will download a definition from a repository and start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
+
+=DockerContrib= *does not need a Foswiki installation*. One can download DockerContrib from GitHub and proceed from there.
+
+Or, if it is included on =foswiki.org=, download the =DockerContrib.tgz= tar ball, untar and proceed from there. No local =Foswiki= installation required. And one can read the description of =DockerContrib= at =foswiki.org/Extensions/DockerContrib=.
+
 
 To use this extension, navigate to the tools directory
 <verbatim>

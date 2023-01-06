@@ -5,6 +5,8 @@ A collection of Docker Foswiki installations.
 
 DockerContrib is a quick way to start a Docker container for a Foswiki installation.
 
+DockerContrib **does not need a Foswiki installation**. One can download DockerContrib from GitHub and proceed from there.
+
 This proof of concept provides a script: `docker-install.pl` that selects a `docker-foswiki` image and starts a container based on that image. 
 
 To use it you must have installed `docker` and started the daemon. Then:
