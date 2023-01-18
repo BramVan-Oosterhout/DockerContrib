@@ -76,7 +76,7 @@ sub getUpdateRepo {
 		chdir "$path/$repo";
 		@cmd = qq( git pull origin $this->{branch} );
 	} else {
-		make_path( $path );
+		make_path( $path/$repo );
 		chdir "$path/$repo";
 		@cmd = qq( git clone $this->{source} );
 	}
