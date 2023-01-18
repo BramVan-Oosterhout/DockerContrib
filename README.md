@@ -13,7 +13,7 @@ To use it you must have installed `docker` and started the daemon. Then:
 * `git clone git@github.com:BramVan-Oosterhout/DockerContrib`
 * `cd DockerContrib/tools`
 * `perl docker-install.pl timlegge -build`
-* in your browser open: `localhost:8080`
+* in your browser open: `localhost:<8080>recommended port>`
 * and use Foswiki
 
 To use this particular image, you need to add a password for the admin user:
@@ -25,12 +25,12 @@ To use this particular image, you need to add a password for the admin user:
 * `docker container rm -f <container name>`
 * `docker exec -it <container name> /bin/bash`
 
-There are two images available through this Contrib:
+There are three images available through this Contrib:
+* Author: Bram van Oosterhout - https://github.com/BramVan-Oosterhout/df-Notepad
 * Author: Tim Legge - https://github.com/timlegge/docker-foswiki
 * Author: Dieken - https://github.com/Dieken/foswiki-docker
 
 Other containers that can be started from this Contrib:
-* `perl docker-install.pl timlegge -type simple`
-* `perl docker-install,pl timlegge -type simple-https`
+* `perl docker-install.pl bram -build`
 * `perl docker-install.pl dieken -build`
 

@@ -11,11 +11,16 @@ sub new {
 			branch => 'main',
 			containerName => 'dieken',
 			dockerfile => 'Dockerfile',
-			image => 'foswiki'
+			image => 'foswiki',
+			@_
 			};
 	bless $self, $class;
 	return $self;
 
+}
+
+sub postInstall{
+	# No post install
 }
 
 

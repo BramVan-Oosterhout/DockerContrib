@@ -15,6 +15,7 @@ sub new {
 			type => { simple => 'docker-compose.1-simple.yml',
 					  'simple-https' => 'docker-compose.2-simple-https.yml',
 					  },
+			@_
 			};
 	bless $self, $class;
 	return $self;
@@ -25,18 +26,19 @@ sub postInstall{
 	
 	my $this = shift;
 	
+	$this->SUPER::postInstall();
+	
 	print STDOUT "Provide admin password for Foswiki: ";
 	my $passwd = <STDIN>;
 	chomp $passwd;
 	
-	my $cmd = join( " ", "docker exec -it",
-				          $this->{containerName},
-						  'sh -c "cd /var/www/foswiki;',
+	my $shParam = join( " ", '-c "cd /var/www/foswiki;',
 						  'tools/configure -save',
 						  "-set {Password}=\'$passwd\'",
 						  '"'
-                  );	
-	$this->do_command( $cmd );
+                  );
+	my @cmd = qq( docker exec -it $this->{containerName} sh $shParam );	
+	$this->do_command( @cmd );
 } 
 
 1;

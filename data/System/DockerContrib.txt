@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1672966041" format="1.1" reprev="5" version="6"}%
+%META:TOPICINFO{author="BramVanOosterhout" comment="" date="1674070569" format="1.1" reprev="5" version="7"}%
 %META:TOPICPARENT{name="Contribs"}%
 <!--
 One line description, required for extensions repository catalog.
@@ -19,15 +19,15 @@ If you don't like reading documentation, and just want a fast route to running a
    2 Untar the tar ball
    3 cd to the tools directory in the created directory tree
    4 =perl docker-install.pl timlegge -build=
-      * You will be asked to specify a passwordr for the Foswiki =admin- login
-   5 In your browser access http://localhost:8080
+      * You will be asked to specify a passwordr for the Foswiki =admin= login
+   5 In your browser access http://localhost:&lt;listed port>
    6 Use your Foswiki
 
 ---++ Using DockerContrib
 
 DockerContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will download a definition from a repository and start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
 
-=DockerContrib= *does not need a Foswiki installation*. One can download DockerContrib from GitHub and proceed from there.
+=DockerContrib= *does not need a Foswiki installation*. One can clone DockerContrib from GitHub and proceed from there.
 
 Or, if it is included on =foswiki.org=, download the =DockerContrib.tgz= tar ball, untar and proceed from there. No local =Foswiki= installation required. And one can read the description of =DockerContrib= at =foswiki.org/Extensions/DockerContrib=.
 
@@ -45,9 +45,11 @@ The docker-install script  accepts the following options:
 | &lt;foswiki install> | The name of the Docker Foswiki contribution you want to install|  |
 | -type | The type of container you want to install | =default= |
 | -build | Build the image from the Dockerfile before installation | -nobuild |
+| -verbose | Display the output of the commands issued. | -noverbose |
 
 The current implementation supports two contributions:
 | *Source* | *Description* |
+| bram | A demonstration of an application =NoyepadApp built with the wiki workbemch |
 | timlegge | A maintained collection of images described at:  https://github.com/timlegge/docker-foswiki. <br /> Two of the four images available can be installed with =docker-install= : =simple= and =simple-https= <br />This is the most complete and maintained Docker Foswiki image implementation. |
 | dieken | A plain Foswiki image that can be started either under =apache (CGI)= or =nginx (FCGI)= |
 
