@@ -1,5 +1,5 @@
-package Foswiki::Contrib::DockerContrib::Dieken;
-use parent Foswiki::Contrib::DockerContrib;
+package Foswiki::Contrib::DockerInstallContrib::Dieken;
+use parent Foswiki::Contrib::DockerInstallContrib;
 
 use strict;
 use warnings;

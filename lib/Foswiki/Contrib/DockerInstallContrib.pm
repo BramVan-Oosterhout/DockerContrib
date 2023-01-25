@@ -1,4 +1,4 @@
-package Foswiki::Contrib::DockerContrib;
+package Foswiki::Contrib::DockerInstallContrib;
 
 use strict;
 use warnings;
@@ -13,7 +13,7 @@ sub new {
 	my $self = {
 			source => 'repository of the Docker specification',
 			branch => 'the repo branch to be cloned/pulled',
-			path => 'path to the dockerfile from DockerContrib/tools',
+			path => 'path to the dockerfile from DockerInstallContrib/tools',
 			image => 'tag for the image generated',
 			port => 'port mapped to the container listening',
 			};
@@ -71,7 +71,7 @@ sub getUpdateRepo {
 	my @cmd;
 	my $curDir = cwd();
 	my ( $owner, $repo ) = ($this->{source} =~ m!([^/]+)/([^/]+)\Z! );
-	my $path = "../working/DockerContrib/" . lc($owner);
+	my $path = "../working/DockerInstallContrib/" . lc($owner);
 	if (-d "$path/$repo" ) {
 		chdir "$path/$repo";
 		@cmd = qq( git pull origin $this->{branch} );

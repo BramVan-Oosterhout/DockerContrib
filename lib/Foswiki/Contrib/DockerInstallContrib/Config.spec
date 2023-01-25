@@ -1,3 +1,3 @@
 # ---+ Extensions
-# ---++ DockerContrib
+# ---++ DockerInstallContrib
 1;

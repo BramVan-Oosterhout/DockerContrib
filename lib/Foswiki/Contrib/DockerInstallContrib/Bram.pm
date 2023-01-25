@@ -1,5 +1,5 @@
-package Foswiki::Contrib::DockerContrib::Bram;
-use parent Foswiki::Contrib::DockerContrib;
+package Foswiki::Contrib::DockerInstallContrib::Bram;
+use parent Foswiki::Contrib::DockerInstallContrib;
 
 use strict;
 use warnings;

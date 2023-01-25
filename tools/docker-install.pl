@@ -6,9 +6,9 @@ BEGIN {
 	unshift @INC, '../lib';
 }
 
-use Foswiki::Contrib::DockerContrib::Dieken;
-use Foswiki::Contrib::DockerContrib::TimLegge;
-use Foswiki::Contrib::DockerContrib::Bram;
+use Foswiki::Contrib::DockerInstallContrib::Dieken;
+use Foswiki::Contrib::DockerInstallContrib::TimLegge;
+use Foswiki::Contrib::DockerInstallContrib::Bram;
 
 use Net::EmptyPort;
 
@@ -30,7 +30,7 @@ GetOptions( 'type=s', \$type,
 			'verbose', \$verbose,
 		  );
 
-my $package = "Foswiki::Contrib::DockerContrib::$source->{$request}";
+my $package = "Foswiki::Contrib::DockerInstallContrib::$source->{$request}";
 
 my $dc = $package->new( ( port => Net::EmptyPort::empty_port(),
 						  verbose => $verbose

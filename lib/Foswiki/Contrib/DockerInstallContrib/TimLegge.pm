@@ -1,5 +1,5 @@
-package Foswiki::Contrib::DockerContrib::TimLegge;
-use parent Foswiki::Contrib::DockerContrib;
+package Foswiki::Contrib::DockerInstallContrib::TimLegge;
+use parent Foswiki::Contrib::DockerInstallContrib;
 
 use strict;
 use warnings;

@@ -15,7 +15,7 @@ One line description, required for extensions repository catalog.
 If you don't like reading documentation, and just want a fast route to running a Foswiki site, then: 
 
    1 Make sure docker is installed and running
-   1 Download the tar ball for DockerContrib  and save it in your home directory
+   1 Download the tar ball for DockerInstallContrib  and save it in your home directory
    2 Untar the tar ball
    3 cd to the tools directory in the created directory tree
    4 =perl docker-install.pl timlegge -build=
@@ -23,13 +23,13 @@ If you don't like reading documentation, and just want a fast route to running a
    5 In your browser access http://localhost:&lt;listed port>
    6 Use your Foswiki
 
----++ Using DockerContrib
+---++ Using DockerInstallContrib
 
-DockerContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will download a definition from a repository and start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
+DockerInstallContrib is an entry point to a collection of Docker Foswiki implementations. The =docker-install= utility will download a definition from a repository and start a container based on the provided image.  To maintain the image and container collection you must be familiar with and use the =docker= script as documented at https://docs.docker.com/.
 
-=DockerContrib= *does not need a Foswiki installation*. One can clone DockerContrib from GitHub and proceed from there.
+=DockerInstallContrib= *does not need a Foswiki installation*. One can clone DockerInstallContrib from GitHub and proceed from there.
 
-Or, if it is included on =foswiki.org=, download the =DockerContrib.tgz= tar ball, untar and proceed from there. No local =Foswiki= installation required. And one can read the description of =DockerContrib= at =foswiki.org/Extensions/DockerContrib=.
+Or, if it is included on =foswiki.org=, download the =DockerInstallContrib.tgz= tar ball, untar and proceed from there. No local =Foswiki= installation required. And one can read the description of =DockerInstallContrib= at =foswiki.org/Extensions/DockerInstallContrib=.
 
 
 To use this extension, navigate to the tools directory
