@@ -7,7 +7,7 @@ use warnings;
 sub new {
 	my $class = shift;
 	my $self = {
-			source => 'https://github.com/timlegge/docker-foswiki',
+			source => 'https://github.com/BramVan-Oosterhout/docker-foswiki',
 			branch => 'master',
 			containerName => 'timlegge',
 			dockerfile => 'Dockerfile',
@@ -28,7 +28,7 @@ sub postInstall{
 	
 	$this->SUPER::postInstall();
 	
-	print STDOUT "Provide admin password for Foswiki: ";
+	print STDOUT "Provide password for Foswiki user 'admin': ";
 	my $passwd = <STDIN>;
 	chomp $passwd;
 	
